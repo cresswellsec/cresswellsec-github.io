@@ -1,11 +1,262 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>My First GitHub Page</title>
+  <title>Casey Cresswell | Cyber Security Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Casey Cresswell – CISSP-certified Cyber Security Engineer specializing in Zero Trust, Privileged Access Management, and accreditation-ready security architectures." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card: #020617;
+      --border: #1e293b;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.08);
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                   "Liberation Mono", "Courier New", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top left, #1f2937, #020617 55%);
+      color: var(--text);
+      font-family: var(--font-main);
+      line-height: 1.6;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 2.5rem 1.25rem 3.5rem;
+    }
+
+    main {
+      width: 100%;
+      max-width: 860px;
+      background: linear-gradient(135deg, rgba(148,163,184,0.06), rgba(15,23,42,0.98));
+      border-radius: 1.25rem;
+      border: 1px solid rgba(148,163,184,0.35);
+      box-shadow:
+        0 22px 45px rgba(15,23,42,0.9),
+        0 0 0 1px rgba(15,23,42,0.9);
+      padding: 2.5rem 2.25rem 2.75rem;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1.25rem 0.75rem 2.5rem;
+      }
+      main {
+        padding: 1.75rem 1.5rem 2.25rem;
+        border-radius: 1rem;
+      }
+    }
+
+    header {
+      border-bottom: 1px solid rgba(148,163,184,0.35);
+      padding-bottom: 1.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    h1 {
+      margin: 0 0 0.35rem;
+      font-size: clamp(1.9rem, 2.5vw + 1rem, 2.3rem);
+      letter-spacing: 0.03em;
+    }
+
+    .tagline {
+      margin: 0 0 1.25rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem 1.25rem;
+      font-size: 0.92rem;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 0.06rem;
+    }
+
+    .contact a:hover,
+    .contact a:focus-visible {
+      border-color: rgba(56,189,248,0.6);
+    }
+
+    section {
+      margin-bottom: 1.75rem;
+    }
+
+    section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .card {
+      background: rgba(15,23,42,0.9);
+      border-radius: 0.9rem;
+      border: 1px solid rgba(148,163,184,0.35);
+      padding: 1.1rem 1.2rem;
+    }
+
+    p {
+      margin: 0 0 0.7rem;
+      font-size: 0.98rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.6fr);
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .split {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    ul {
+      margin: 0.15rem 0 0;
+      padding-left: 1.1rem;
+      font-size: 0.96rem;
+    }
+
+    li + li {
+      margin-top: 0.25rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.4rem;
+    }
+
+    .pill {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      background: rgba(15,23,42,0.95);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .pill--accent {
+      border-color: rgba(56,189,248,0.7);
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.1rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(74,222,128,0.5);
+      background: rgba(22,163,74,0.09);
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: #bbf7d0;
+      margin-bottom: 0.6rem;
+    }
+
+    .badge span:first-child {
+      font-size: 0.95rem;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .projects-note {
+      border-radius: 0.75rem;
+      border: 1px dashed rgba(148,163,184,0.65);
+      padding: 0.75rem 0.9rem;
+      background: rgba(15,23,42,0.8);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 2.2rem;
+      border-top: 1px solid rgba(148,163,184,0.35);
+      padding-top: 0.9rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    @media (max-width: 640px) {
+      footer {
+        text-align: left;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <p>This is my first site on GitHub Pages.</p>
-</body>
-</html>
+  <main>
+    <header>
+      <h1>Casey Cresswell</h1>
+      <p class="tagline">
+        CISSP-certified Cyber Security Engineer &mdash; Privileged Access Management, Zero Trust, and accreditation-ready architectures for federal and defense CIS.
+      </p>
+      <div class="contact">
+        <span><a href="mailto:casey@cresswell.io">casey@cresswell.io</a></span>
+        <span><a href="tel:+18016783582">+1&nbsp;(801)&nbsp;678-3582</a></span>
+        <span>Salt Lake City, Utah, USA</span>
+        <span><a href="https://www.linkedin.com/in/caseycresswell" target="_blank" rel="noopener">LinkedIn</a></span>
+        <span><a href="https://www.cresswell.io" target="_blank" rel="noopener">www.cresswell.io</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+      <div class="card">
+        <div class="badge">
+          <span>●</span>
+          <span>CISSP (ISC²), 2025</span>
+        </div>
+        <p>
+          Casey Cresswell is a CISSP-certified Cyber Security Engineer specializing in Privileged Access Management, Zero-Trust design, and security accreditation for federal and defense Communication and Information Systems (CIS).
+          He has led architecture, implementation, and documentation of secure hybrid-cloud environments using CyberArk, AppGate SDP, AWS native controls, and Infrastructure-as-Code.
+        </p>
+        <p>
+          His work focuses on building accreditation-ready security systems&mdash;producing clear SSP/SAR/POA&amp;M documentation, designing compliant cloud architectures, and operationalizing enterprise vulnerability management pipelines (Nessus, ORCA).
+          Across multiple environments, Casey has served as the primary technical liaison to accreditation authorities, translating complex engineering detail into defensible security evidence.
+        </p>
+        <p>
+          He is currently developing a Retrieval-Augmented Generation (RAG) project to explore AI-driven sec
