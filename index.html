@@ -251,12 +251,67 @@
           <span>CISSP (ISC²), 2025</span>
         </div>
         <p>
-          Casey Cresswell is a CISSP-certified Cyber Security Engineer specializing in Privileged Access Management, Zero-Trust design, and security accreditation for federal and defense Communication and Information Systems (CIS).
-          He has led architecture, implementation, and documentation of secure hybrid-cloud environments using CyberArk, AppGate SDP, AWS native controls, and Infrastructure-as-Code.
+          I’m a CISSP-certified Cyber Security Engineer specializing in Privileged Access Management, Zero-Trust design, and security accreditation for federal and defense Communication and Information Systems (CIS). I design and document secure hybrid-cloud environments using tools like CyberArk, AppGate SDP, AWS native services, and Infrastructure-as-Code.
         </p>
         <p>
-          His work focuses on building accreditation-ready security systems&mdash;producing clear SSP/SAR/POA&amp;M documentation, designing compliant cloud architectures, and operationalizing enterprise vulnerability management pipelines (Nessus, ORCA).
-          Across multiple environments, Casey has served as the primary technical liaison to accreditation authorities, translating complex engineering detail into defensible security evidence.
+          I focus on building accreditation-ready security systems—writing SSPs, SARs, POA&Ms, boundary diagrams, and control mappings; designing compliant cloud architectures; and running enterprise vulnerability management pipelines (Nessus, ORCA). I regularly serve as the technical liaison to accreditation authorities, translating engineering detail into defensible evidence.
         </p>
         <p>
-          He is currently developing a Retrieval-Augmented Generation (RAG) project to explore AI-driven sec
+          I’m also developing a Retrieval-Augmented Generation (RAG) project aimed at AI-driven security analysis and evidence generation. Details and a live demo will be added once the project is ready for public release.
+        </p>
+      </div>
+    </section>
+
+    <section class="split">
+      <div>
+        <h2>Focus Areas</h2>
+        <div class="card">
+          <ul>
+            <li>Designing and hardening Zero-Trust and Privileged Access Management architectures across hybrid-cloud and on-prem CIS environments.</li>
+            <li>Producing accreditation evidence for FISMA Moderate/High and DoD DISA SRG IL4/IL5 systems.</li>
+            <li>Leading enterprise vulnerability management and developing custom remediation strategies for complex findings.</li>
+            <li>Using Infrastructure-as-Code (Terraform, Ansible, GitHub Actions) to make security controls repeatable and auditable.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2>Key Technologies</h2>
+        <div class="card">
+          <div class="pill-row">
+            <span class="pill pill--accent">CISSP</span>
+            <span class="pill">CyberArk PAM / Conjur</span>
+            <span class="pill">Zero Trust / AppGate SDP</span>
+            <span class="pill">AWS GuardDuty / Security Hub</span>
+            <span class="pill">Nessus · ORCA</span>
+            <span class="pill">Terraform</span>
+            <span class="pill">Ansible</span>
+            <span class="pill">GitHub Actions</span>
+            <span class="pill">NIST SP 800-53 r5</span>
+            <span class="pill">DISA SRG IL4/IL5</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="projects-note">
+        My current Retrieval-Augmented Generation (RAG) security project will be linked here once the public demo is ready. The project focuses on using AI to interpret, contextualize, and help generate accreditation evidence across complex CIS environments.
+      </div>
+    </section>
+
+    <footer>
+      <span class="muted">
+        © <span id="year"></span> Casey Cresswell
+      </span>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var span = document.getElementById("year");
+      if (span) span.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
