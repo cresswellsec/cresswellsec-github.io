@@ -1,2 +1,2 @@
-# cresswellsec-github.io
-personal site for cresswell.io
+# cresswell.io
+Personal site.
